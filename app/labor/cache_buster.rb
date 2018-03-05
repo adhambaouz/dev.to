@@ -1,6 +1,7 @@
 class CacheBuster
 
   def bust(path)
+    return unless Rails.env.production?
     request = HTTParty.post("https://api.fastly.com/purge/https://dev.to#{path}",
     :headers => { 'Fastly-Key' => 'REDACTED_USE_PRIVATE_CONFIGURATION' } )
     request = HTTParty.post("https://api.fastly.com/purge/https://dev.to#{path}?i=i",
