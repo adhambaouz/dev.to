@@ -96,7 +96,6 @@ RSpec.configure do |config|
     stub_request(:any, /res.cloudinary.com/).to_rack("dsdsdsds")
 
     stub_request(:post, /api.fastly.com/).
-      with(headers: { "Fastly-Key" => "REDACTED_USE_PRIVATE_CONFIGURATION" }).
       to_return(status: 200, body: "", headers: {})
 
     stub_request(:post, /api.bufferapp.com/).
