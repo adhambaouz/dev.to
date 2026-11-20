@@ -49,3 +49,14 @@ package-lock.json
 
 #Jetbrains Tools
 .idea/
+
+# Keep credentials and personal records out of Git.
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pfx
+*.p12
+id_rsa
+id_ed25519
