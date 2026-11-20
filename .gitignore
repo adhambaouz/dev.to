@@ -58,3 +58,14 @@ _docker-storage/
 
 # YARD generated doc (in the Gitdocs folder)
 docs/.static/ruby-doc/
+
+# Keep credentials and personal records out of Git.
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pfx
+*.p12
+id_rsa
+id_ed25519
